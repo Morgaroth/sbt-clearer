@@ -14,7 +14,7 @@
         
              clearConsole 
              
-        in sbt interactive mode and enjoy 30 lines of nothing, which in the end means clear console
+        in sbt interactive mode and enjoy 30 lines of nothing, which in the end means clear console :)
         
 
 ###### More configuraion in second release ;]
