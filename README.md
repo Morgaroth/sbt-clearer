@@ -1,4 +1,4 @@
-## sbt-clearer
+## Clear your sbt console
 
 ===========
 
