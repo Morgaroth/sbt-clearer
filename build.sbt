@@ -32,3 +32,13 @@ pomExtra := <url>https://github.com/Morgaroth/sbt-clearer</url>
       <name>Mateusz Jaje</name>
     </developer>
   </developers>
+
+//libraryDependencies += "net.databinder.dispatch" %% "dispatch-core" % "0.11.1"
+
+libraryDependencies += "net.databinder" %% "dispatch-core" % "0.8.10"
+
+crossScalaVersions := Seq("2.9.2")
+
+crossBuildingSettings
+
+sbtVersion in sbtPlugin := "0.12"
