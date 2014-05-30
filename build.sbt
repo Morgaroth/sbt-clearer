@@ -10,7 +10,7 @@ name := "sbt-clearer"
 
 organization := "pl.morgaroth"
 
-version := "0.1.0"
+version := "0.1.1"
 
 publishMavenStyle := true
 
@@ -33,12 +33,12 @@ pomExtra := <url>https://github.com/Morgaroth/sbt-clearer</url>
     </developer>
   </developers>
 
-//libraryDependencies += "net.databinder.dispatch" %% "dispatch-core" % "0.11.1"
-
-libraryDependencies += "net.databinder" %% "dispatch-core" % "0.8.10"
-
-crossScalaVersions := Seq("2.9.2")
 
 crossBuildingSettings
 
+crossScalaVersions := Seq("2.9.2")
+
 sbtVersion in sbtPlugin := "0.12"
+
+  //crossScalaVersions := Seq("2.9.2","2.10.0")
+  //sbtVersion in sbtPlugin := "0.13"

@@ -7,9 +7,19 @@ object ClearerPlugin extends Plugin {
 
   override lazy val settings = Seq(commands += clearCommand)
 
-  def clearCommand() = Command.command("clearConsole", "Clear your console", "inerts 30 new lines") {
+  object ClearerKeys {
+    val linesCount = SettingKey[Int]("Lines to input")
+
+    lazy val settings: Seq[Setting[_]] = Seq(
+      linesCount := 30
+    )
+  }
+
+  def clearCommand() = Command.command("clearConsole", "Clear your console", "inerts new lines") {
     (state: State) => {
-      (1 to 30).foreach {
+      val extracted = Project.extract(state)
+      val lines = extracted get ClearerKeys.linesCount
+      (1 to lines).foreach {
         _ => println()
       }
       state
